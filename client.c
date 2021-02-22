@@ -14,7 +14,7 @@ int main(){
 		err(-1, "Unable to connect to socket");
 	while (1){
 		fgets(buf, 128, stdin);
-		if (write(sk, buf, sizeof(buf))<0)
+		if (write(sk, buf, 128)<0)
 			err(-1, "Couldnot send to socket");
 	}
 	return 0;
